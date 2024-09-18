@@ -1,4 +1,4 @@
-<header class='mb-3'>
+<header>
                 <nav class="navbar navbar-expand navbar-light ">
                     <div class="container-fluid">
                         <a href="#" class="burger-btn d-block">
@@ -26,7 +26,7 @@
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="min-width: 11rem;">
                                     <li>
-                                        <a class="dropdown-item" href="#" onclick="$('#form-logout').submit()">
+                                        <a class="dropdown-item" href="#" onclick="document.getElementById('form-logout').submit()">
                                             <i class="icon-mid bi bi-box-arrow-left me-2"></i> Logout
                                         </a>
 

@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="{{ asset('/css/app.css')}}">
 
     <link rel="shortcut icon" href="{{ asset('/images/favicon.svg')}}" type="image/x-icon">
+
+    @stack('styles')
 </head>
 
 <body>
@@ -26,7 +28,7 @@
         
             <x-header />
         
-            <div id="main-content">
+            <div id="main-content" class="pt-0">
                 @yield('content')
 
                 <x-footer />
@@ -37,6 +39,8 @@
     <script src="{{ asset('/vendors/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
     <script src="{{ asset('/js/bootstrap.bundle.min.js')}}"></script>
     
+    @stack('scripts')
+
     <script src="{{ asset('/js/mazer.js')}}"></script>
 </body>
 

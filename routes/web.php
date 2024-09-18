@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/admin');
 });
 
 Auth::routes([
@@ -27,4 +27,8 @@ Route::group([
     Route::get('/dashboard', [
         App\Http\Controllers\HomeController::class, 'index'
     ])->name('dashboard');
+
+    // Routing CRUD: institution
+    Route::resource('/institution', 
+        App\Http\Controllers\InstitutionController::class);
 });
